@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Janine\Source\Repos\Calculator\WPF_Calculator\WPF_Calculator\obj\Debug\netcoreapp3.1\
+C:\Users\Janine\source\repos\Calculator\WPF_Calculator\WPF_Calculator\obj\Debug\netcoreapp3.1\
 WPF_Calculator
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Janine\Source\Repos\Calculator\WPF_Calculator\WPF_Calculator\App.xaml
+C:\Users\Janine\source\repos\Calculator\WPF_Calculator\WPF_Calculator\App.xaml
 11151548125
 
 4720708629
 1921654412462
 MainWindow.xaml;
 
-False
+True
 

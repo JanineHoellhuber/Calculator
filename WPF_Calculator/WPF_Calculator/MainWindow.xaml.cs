@@ -22,8 +22,8 @@ namespace WPF_Calculator
     {
         public int number1ToStore = 0;
         public int number2ToStore = 0;
-        public int operatorToStore = 0;
-        public int istGleichToStore = 0;
+        public char operatorToStore = ' ';
+        public bool istGleichToStore = false;
         public int ergebnisToStore = 0;
 
 
@@ -35,10 +35,24 @@ namespace WPF_Calculator
             btnNumber0.Click += Button_Click;
             btnNumber1.Click += Button_Click;
             btnNumber2.Click += Button_Click;
+            btnNumber3.Click += Button_Click;
+            btnNumber4.Click += Button_Click;
+            btnNumber5.Click += Button_Click;
+            btnNumber6.Click += Button_Click;
+            btnNumber7.Click += Button_Click;
+            btnNumber8.Click += Button_Click;
+            btnNumber9.Click += Button_Click;
 
 
-            opIstGleich.Click += OpIstGleich_Click;
-            
+            opIstGleich.Click += Button_Click;
+            opPlus.Click += Button_Click;
+            opMinus.Click += Button_Click;
+            opMal.Click += Button_Click;
+            opDividiert.Click += Button_Click;
+
+            opClear.Click += Button_Click;
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -157,19 +171,77 @@ namespace WPF_Calculator
                         number2ToStore = 0;
                     }
                     break;
+                case "System.Windows.Controls.Button: _+":
+                    Ergebnis.Text = "+";
+                    operatorToStore = '+';
+                    break;
+                case "System.Windows.Controls.Button: _-":
+                    Ergebnis.Text = "-";
+                    operatorToStore = '-';
+                    break;
+                case "System.Windows.Controls.Button: _*":
+                    Ergebnis.Text = "*";
+                    operatorToStore = '*';
+                    break;
+                case "System.Windows.Controls.Button: _/":
+                    Ergebnis.Text = "/";
+                    operatorToStore = '/'; 
+                    break;
+                case "System.Windows.Controls.Button: _C":
+                    number2ToStore = 0;
+                    ergebnisToStore = 0;
+                    number1ToStore = 0;
+                    Ergebnis.Text = " ";
+                    break;
+                case "System.Windows.Controls.Button: _=":
+                  
+                    if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '+')
+                    {
+                        ergebnisToStore = number1ToStore + number2ToStore;
+                        Ergebnis.Text = number1ToStore + "+" + number2ToStore + "=" + ergebnisToStore.ToString();
+
+                    }
+                    else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '-')
+                    {
+                        ergebnisToStore = number1ToStore - number2ToStore;
+                        Ergebnis.Text = number1ToStore + "-" + number2ToStore + "=" + ergebnisToStore.ToString();
+
+                    }
+                    else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '*')
+                    {
+                        if (number1ToStore == 0 || number2ToStore == 0)
+                        {
+                            ergebnisToStore = 0;
+                        }
+                        else {
+                            ergebnisToStore = number1ToStore * number2ToStore;
+                        }
+                        Ergebnis.Text = number1ToStore + "*" + number2ToStore + "=" + ergebnisToStore.ToString();
+
+                    }
+                    if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '/')
+                    {
+                        if (number1ToStore == 0 || number2ToStore == 0)
+                        {
+                            ergebnisToStore = 0;
+                        }
+                        else
+                        {
+                            ergebnisToStore = number1ToStore / number2ToStore;
+                        }
+                        Ergebnis.Text = number1ToStore + "/" + number2ToStore + "=" + ergebnisToStore.ToString();
+
+                    }
+                    
+                    break;
                 default:
                     break;
 
+              }
+          
             }
-            if(number1ToStore != 0 && number2ToStore != 0)
-        }
+        
 
-        private void OpIstGleich_Click(object sender, RoutedEventArgs e)
-        {
-            //bool isPushed = true;
-            //if()
-            //Ergebnis.Visibility = Visibility.Visible;
-
-        }
+      
     }
 }

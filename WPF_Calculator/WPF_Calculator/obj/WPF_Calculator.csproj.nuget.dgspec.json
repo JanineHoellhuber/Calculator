@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Janine\\Source\\Repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj": {}
+    "C:\\Users\\Janine\\source\\repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Janine\\Source\\Repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj": {
+    "C:\\Users\\Janine\\source\\repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Janine\\Source\\Repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\Janine\\source\\repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj",
         "projectName": "WPF_Calculator",
-        "projectPath": "C:\\Users\\Janine\\Source\\Repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj",
+        "projectPath": "C:\\Users\\Janine\\source\\repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\WPF_Calculator.csproj",
         "packagesPath": "C:\\Users\\Janine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Janine\\Source\\Repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\obj\\",
+        "outputPath": "C:\\Users\\Janine\\source\\repos\\Calculator\\WPF_Calculator\\WPF_Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
