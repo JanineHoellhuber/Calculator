@@ -29,25 +29,25 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <Button Name="btnNumber1" Grid.Row="2" Grid.Column="1" Content="_1" Margin="5,10,0,0" />
-        <Button Name="btnNumber2" Grid.Row="2" Grid.Column="2" Content="_2" Margin="5,10,0,0" />
-        <Button Name="btnNumber3" Grid.Row="2" Grid.Column="3" Content="_3" Margin="5,10,0,0" />
-        <Button Name="btnNumber4" Grid.Row="3" Grid.Column="1" Content="_4" Margin="5,10,0,0" />
-        <Button Name="btnNumber5" Grid.Row="3" Grid.Column="2" Content="_5" Margin="5,10,0,0" />
-        <Button Name="btnNumber6" Grid.Row="3" Grid.Column="3" Content="_6" Margin="5,10,0,0" />
-        <Button Name="btnNumber7" Grid.Row="4" Grid.Column="1" Content="_7" Margin="5,10,0,0" />
-        <Button Name="btnNumber8" Grid.Row="4" Grid.Column="2" Content="_8" Margin="5,10,0,0" />
-        <Button Name="btnNumber9" Grid.Row="4" Grid.Column="3" Content="_9" Margin="5,10,0,0" />
-        <Button Name="btnNumber0" Grid.Row="5" Grid.Column="2" Content="_0" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber1" Grid.Row="2" Grid.Column="1" Content="_1" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber2" Grid.Row="2" Grid.Column="2" Content="_2" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber3" Grid.Row="2" Grid.Column="3" Content="_3" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber4" Grid.Row="3" Grid.Column="1" Content="_4" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber5" Grid.Row="3" Grid.Column="2" Content="_5" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber6" Grid.Row="3" Grid.Column="3" Content="_6" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber7" Grid.Row="4" Grid.Column="1" Content="_7" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber8" Grid.Row="4" Grid.Column="2" Content="_8" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber9" Grid.Row="4" Grid.Column="3" Content="_9" Margin="5,10,0,0" />
+        <Button x:Name="btnNumber0" Grid.Row="5" Grid.Column="2" Content="_0" Margin="5,10,0,0" />
 
-        <Button Name="opPlus" Grid.Row="2" Grid.Column="5" Content="_+" Margin="5,10,0,0" />
-        <Button Name="opIstGleich" Grid.Row="2" Grid.Column="6" Content="_=" Grid.RowSpan="3" Margin="5,10,0,0" />
-        <Button Name="opMinus" Grid.Row="3" Grid.Column="5" Content="_-" Margin="5,10,0,0" />
-        <Button Name="opMal" Grid.Row="4" Grid.Column="5" Content="_*" Margin="5,10,0,0" />
-        <Button Name="opDividiert" Grid.Row="5" Grid.Column="5" Content="_/" Margin="5,10,0,0" />
-        <Button Name="opClear" Grid.Row="5" Grid.Column="6" Content="_C" Margin="5,10,0,0" />
+        <Button x:Name="opPlus" Grid.Row="2" Grid.Column="5" Content="_+" Margin="5,10,0,0" />
+        <Button x:Name="opIstGleich" Grid.Row="2" Grid.Column="6" Content="_=" Grid.RowSpan="3" Margin="5,10,0,0" />
+        <Button x:Name="opMinus" Grid.Row="3" Grid.Column="5" Content="_-" Margin="5,10,0,0" />
+        <Button x:Name="opMal" Grid.Row="4" Grid.Column="5" Content="_*" Margin="5,10,0,0" />
+        <Button x:Name="opDividiert" Grid.Row="5" Grid.Column="5" Content="_/" Margin="5,10,0,0" />
+        <Button x:Name="opClear" Grid.Row="5" Grid.Column="6" Content="_C" Margin="5,10,0,0" />
 
-        <TextBlock Name="Ergebnis" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Margin="0,15,0,15" Visibility="Visible" />
+        <TextBlock x:Name="Ergebnis" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Margin="0,15,0,15" Visibility="Visible" />
         
 
     </Grid>
