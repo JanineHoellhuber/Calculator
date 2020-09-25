@@ -26,6 +26,7 @@ namespace WPF_Calculator
         public bool istGleichToStore = false;
         public int ergebnisToStore = 0;
         public Button getNumbers;
+        public bool buttonWithNumber1ToStoreIsClicked = false;
 
 
         public MainWindow()
@@ -62,110 +63,120 @@ namespace WPF_Calculator
             {
                 case "_1":
                     Ergebnis.Text = "1";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 1;
+                        buttonWithNumber1ToStoreIsClicked = true; 
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 1;
                     }
                     break;
                 case "_2":
                     Ergebnis.Text = "2";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 2;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 2;
                     }
                     break;
                 case "_3":
                     Ergebnis.Text = "3";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 3;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 3;
                     }
                     break;
                 case "_4":
                     Ergebnis.Text = "4";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 4;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 4;
                     }
                     break;
                 case "_5":
                     Ergebnis.Text = "5";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 5;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 5;
                     }
                     break;
                 case "_6":
                     Ergebnis.Text = "6";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 6;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 6;
                     }
                     break;
                 case "_7":
                     Ergebnis.Text = "7";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 7;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 7;
                     }
                     break;
                 case "_8":
                     Ergebnis.Text = "8";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 8;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 8;
                     }
                     break;
                 case "_9":
                     Ergebnis.Text = "9";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 9;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 9;
                     }
                     break;
                 case "_0":
                     Ergebnis.Text = "0";
-                    if (number1ToStore == 0)
+                    if (!buttonWithNumber1ToStoreIsClicked)
                     {
                         number1ToStore = 0;
+                        buttonWithNumber1ToStoreIsClicked = true;
                     }
-                    else if (number2ToStore == 0)
+                    else if (buttonWithNumber1ToStoreIsClicked)
                     {
                         number2ToStore = 0;
                     }
@@ -191,44 +202,38 @@ namespace WPF_Calculator
                     ergebnisToStore = 0;
                     number1ToStore = 0;
                     Ergebnis.Text = " ";
+                    buttonWithNumber1ToStoreIsClicked = false;
                     break;
                 case "_=":
                   
-                    if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '+')
+                    if (operatorToStore == '+')
                     {
                         ergebnisToStore = number1ToStore + number2ToStore;
                         Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
-                    else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '-')
+                    else if (operatorToStore == '-')
                     {
                         ergebnisToStore = number1ToStore - number2ToStore;
                         Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
-                    else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '*')
+                    else if (operatorToStore == '*')
                     {
-                        if (number1ToStore == 0 || number2ToStore == 0)
-                        {
-                            ergebnisToStore = 0;
-                        }
-                        else {
-                            ergebnisToStore = number1ToStore * number2ToStore;
-                        }
-                        Ergebnis.Text = ergebnisToStore.ToString();
+                       ergebnisToStore = number1ToStore * number2ToStore;
+                       Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
-                    if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '/')
+                    if (operatorToStore == '/')
                     {
-                        if (number1ToStore == 0 || number2ToStore == 0)
-                        {
-                            ergebnisToStore = 0;
-                        }
-                        else
-                        {
+                        if(number2ToStore != 0) { 
                             ergebnisToStore = number1ToStore / number2ToStore;
+                            Ergebnis.Text = ergebnisToStore.ToString();
                         }
-                        Ergebnis.Text = ergebnisToStore.ToString();
+                        else 
+                        {
+                            Ergebnis.Text = "Teilen durch 0 nicht möglich";
+                        }
 
                     }
                     
