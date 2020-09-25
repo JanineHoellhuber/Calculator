@@ -25,13 +25,13 @@ namespace WPF_Calculator
         public char operatorToStore = ' ';
         public bool istGleichToStore = false;
         public int ergebnisToStore = 0;
+        public Button getNumbers;
 
 
         public MainWindow()
         {
             InitializeComponent();
         
-            //variablen für zustand speicherung  (btn1 und btn2 die gedrückt wurden)
             btnNumber0.Click += Button_Click;
             btnNumber1.Click += Button_Click;
             btnNumber2.Click += Button_Click;
@@ -57,11 +57,10 @@ namespace WPF_Calculator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            object getNumbers = sender.ToString();
-
-            switch (getNumbers)
+             getNumbers = (Button)sender;
+            switch (getNumbers.Content.ToString())
             {
-                case "System.Windows.Controls.Button: _1":
+                case "_1":
                     Ergebnis.Text = "1";
                     if (number1ToStore == 0)
                     {
@@ -72,7 +71,7 @@ namespace WPF_Calculator
                         number2ToStore = 1;
                     }
                     break;
-                case "System.Windows.Controls.Button: _2":
+                case "_2":
                     Ergebnis.Text = "2";
                     if (number1ToStore == 0)
                     {
@@ -83,7 +82,7 @@ namespace WPF_Calculator
                         number2ToStore = 2;
                     }
                     break;
-                case "System.Windows.Controls.Button: _3":
+                case "_3":
                     Ergebnis.Text = "3";
                     if (number1ToStore == 0)
                     {
@@ -94,7 +93,7 @@ namespace WPF_Calculator
                         number2ToStore = 3;
                     }
                     break;
-                case "System.Windows.Controls.Button: _4":
+                case "_4":
                     Ergebnis.Text = "4";
                     if (number1ToStore == 0)
                     {
@@ -105,7 +104,7 @@ namespace WPF_Calculator
                         number2ToStore = 4;
                     }
                     break;
-                case "System.Windows.Controls.Button: _5":
+                case "_5":
                     Ergebnis.Text = "5";
                     if (number1ToStore == 0)
                     {
@@ -116,7 +115,7 @@ namespace WPF_Calculator
                         number2ToStore = 5;
                     }
                     break;
-                case "System.Windows.Controls.Button: _6":
+                case "_6":
                     Ergebnis.Text = "6";
                     if (number1ToStore == 0)
                     {
@@ -127,7 +126,7 @@ namespace WPF_Calculator
                         number2ToStore = 6;
                     }
                     break;
-                case "System.Windows.Controls.Button: _7":
+                case "_7":
                     Ergebnis.Text = "7";
                     if (number1ToStore == 0)
                     {
@@ -138,7 +137,7 @@ namespace WPF_Calculator
                         number2ToStore = 7;
                     }
                     break;
-                case "System.Windows.Controls.Button: _8":
+                case "_8":
                     Ergebnis.Text = "8";
                     if (number1ToStore == 0)
                     {
@@ -149,7 +148,7 @@ namespace WPF_Calculator
                         number2ToStore = 8;
                     }
                     break;
-                case "System.Windows.Controls.Button: _9":
+                case "_9":
                     Ergebnis.Text = "9";
                     if (number1ToStore == 0)
                     {
@@ -160,7 +159,7 @@ namespace WPF_Calculator
                         number2ToStore = 9;
                     }
                     break;
-                case "System.Windows.Controls.Button: _0":
+                case "_0":
                     Ergebnis.Text = "0";
                     if (number1ToStore == 0)
                     {
@@ -171,40 +170,40 @@ namespace WPF_Calculator
                         number2ToStore = 0;
                     }
                     break;
-                case "System.Windows.Controls.Button: _+":
+                case "_+":
                     Ergebnis.Text = "+";
                     operatorToStore = '+';
                     break;
-                case "System.Windows.Controls.Button: _-":
+                case "_-":
                     Ergebnis.Text = "-";
                     operatorToStore = '-';
                     break;
-                case "System.Windows.Controls.Button: _*":
+                case "_*":
                     Ergebnis.Text = "*";
                     operatorToStore = '*';
                     break;
-                case "System.Windows.Controls.Button: _/":
+                case "_/":
                     Ergebnis.Text = "/";
                     operatorToStore = '/'; 
                     break;
-                case "System.Windows.Controls.Button: _C":
+                case "_C":
                     number2ToStore = 0;
                     ergebnisToStore = 0;
                     number1ToStore = 0;
                     Ergebnis.Text = " ";
                     break;
-                case "System.Windows.Controls.Button: _=":
+                case "_=":
                   
                     if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '+')
                     {
                         ergebnisToStore = number1ToStore + number2ToStore;
-                        Ergebnis.Text = number1ToStore + "+" + number2ToStore + "=" + ergebnisToStore.ToString();
+                        Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
                     else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '-')
                     {
                         ergebnisToStore = number1ToStore - number2ToStore;
-                        Ergebnis.Text = number1ToStore + "-" + number2ToStore + "=" + ergebnisToStore.ToString();
+                        Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
                     else if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '*')
@@ -216,7 +215,7 @@ namespace WPF_Calculator
                         else {
                             ergebnisToStore = number1ToStore * number2ToStore;
                         }
-                        Ergebnis.Text = number1ToStore + "*" + number2ToStore + "=" + ergebnisToStore.ToString();
+                        Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
                     if (number1ToStore != 0 && number2ToStore != 0 && operatorToStore == '/')
@@ -229,7 +228,7 @@ namespace WPF_Calculator
                         {
                             ergebnisToStore = number1ToStore / number2ToStore;
                         }
-                        Ergebnis.Text = number1ToStore + "/" + number2ToStore + "=" + ergebnisToStore.ToString();
+                        Ergebnis.Text = ergebnisToStore.ToString();
 
                     }
                     
